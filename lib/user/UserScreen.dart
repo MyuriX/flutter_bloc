@@ -89,11 +89,11 @@ class UserScreenState extends State<UserScreen> {
                   children: <Widget>[
                     Padding(
                       padding: const EdgeInsets.fromLTRB(0, 0, 0, 5),
-                      child: Text(snapshot.data[index].login),
+                      child: Text(snapshot.data[index].temp[index].login != null ? snapshot.data[index].temp[index].login : 'Empty'),
                     ),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(0, 0, 0, 5),
-                      child: Text(snapshot.data[index].type),
+                      child: Text(snapshot.data[index].temp[index].type != null ? snapshot.data[index].temp[index].type : 'Empty' ),
                     )
                   ],
                 ),

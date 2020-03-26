@@ -21,15 +21,10 @@ class Userbloc{
     _isLoadMore.sink.add;
   }
 
-
-    getUsers() async{
+  getUsers() async{
       List<UserResponse> userResponse = await _userRepository.getUserList();
-//      if(userResponse.isSuccessFull){
         _userListController.sink.add(userResponse);
         print('Bloc::API sucess');
-//      }else{
-//
-//      }
     }
 
     dispose(){
